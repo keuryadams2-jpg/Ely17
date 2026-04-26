@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Para ti ❤️</title>
+<style>
+body {
+  text-align: center;
+  font-family: Arial;
+  background: linear-gradient(135deg, #ffb6c1, #ffc0cb);
+  overflow: hidden;
+}
+h1 {
+  margin-top: 100px;
+}
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#yes {
+  background-color: #ff4d6d;
+  color: white;
+}
+#no {
+  position: absolute;
+  background-color: gray;
+  color: white;
+}
+img {
+  margin-top: 20px;
+  border-radius: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Oye… una preguntica 😏💖</h1>
+<p>Si tuvieras que empezar otra vez…</p>
+<h2>¿me elegirías de nuevo? 🥺</h2>
+
+<button id="yes" onclick="yes()">Sí 💖</button>
+<button id="no" onmouseover="move()">No 😢</button>
+
+<script>
+function yes() {
+  document.body.innerHTML = `
+  <h1>Sabía que dirías que sí 😍</h1>
+  <p>Eres lo mejor que me ha pasado 💕</p>
+  <p>Y aunque estemos lejos… siempre te elijo a ti 💖</p>
+  <img src="https://i.imgur.com/4M7IWwP.jpeg" width="250">
+  `;
+}
+
+function move() {
+  let x = Math.random() * (window.innerWidth - 100);
+  let y = Math.random() * (window.innerHeight - 50);
+  document.getElementById("no").style.left = x + "px";
+  document.getElementById("no").style.top = y + "px";
+}
+</script>
+
+</body>
+</html>
